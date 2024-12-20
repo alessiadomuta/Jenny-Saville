@@ -1,0 +1,480 @@
+
+/*===
+BODY
+===*/
+
+body{
+    grid-template-areas: "h h"
+                         "m m"
+                         "b b"  
+                         "c c" 
+                         "f f";  
+}
+
+/*====
+HEADER
+====*/
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+}
+
+header h1{
+    max-width: 100%;
+    padding: 0;
+    font-size: 4em;
+    width: 2em;
+}
+
+/*==
+MENU
+==*/
+
+#menu_hamburger{
+    display: flex;
+    cursor: pointer;
+    align-self: center;
+    background-image: url(images/hamburger_menu.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-indent: 200%;
+    line-height: 1em;
+    font-size: 2.5em;
+    overflow: hidden;
+    border: none;
+    background-color: transparent;
+}
+
+#menu{
+    opacity: 0;
+    margin: 0;
+    max-height: 1px;
+    overflow-y: hidden;
+    transition: opacity 0.5s ease-out;
+}
+
+#menu.show{
+    max-height: 100%;
+    opacity: 1;
+}
+
+#menu ul{
+    border-top: 1px solid var(--breadcolor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5em 0em;
+    width: 100%;
+}
+
+#menu ul li{
+    margin: 0.5em 0em;
+}
+
+#menu ul #currentLink{
+    border-bottom: 1px solid var(--breadcolor);
+}
+
+/*=======
+CONTENUTO
+=======*/
+
+.info_piccolo {
+    width: 80%;
+}
+
+    /*=======
+    OPEREHOME
+    =======*/
+
+    #operehome li{
+        line-height: 8em;
+    }
+
+    /*=======
+    BIOGRAFIA
+    =======*/
+
+    #biografia{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #biografia dl dt{
+        font-size: 1.5em;
+        padding: 0em;
+    }
+
+    #biografia dl dt:nth-of-type(2n){
+        padding-left: 0.5em;
+    }
+
+    #biografia dl dt:nth-of-type(2n-1){
+        padding-right: 0.5em;
+    }
+
+    #biografia dl dd{
+        padding: 0;
+    }
+
+    /*===
+    OPERE
+    ===*/
+
+    #opere{
+        grid-gap:0.5em
+    }
+
+    #opere li a span{
+        position: absolute;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px);
+    }
+
+        /*===
+        OPERA
+        ===*/
+
+        #pagina_opera > div{
+            flex-direction: column;
+        }
+
+        #pagina_opera > div img{
+            width: 90%;
+        }
+
+/*==
+FORM
+==*/
+
+input[type="text"], input[type="number"], input[type="password"] {
+    width: 90%;
+}
+
+input[type="submit"]{
+    width: auto;
+}
+
+.formAltraOpzione{
+    width: auto;
+}
+
+    /*============
+    AREA PERSONALE
+    ============*/
+
+    #datiprofilo div{
+        flex-direction: column;
+    }
+
+    #datiprofilo > div > div, #datiprofilo div div dd dl{
+        align-items: center;
+    }
+
+    .ordini_effettuati{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 0.5em;
+    }
+
+    .ordini_effettuati li:nth-child(3), .ordini_effettuati li:nth-child(4), .ordini_effettuati li:nth-child(5){
+        display: none;
+    }
+
+    .ordini_effettuati .informazioni_prodotto{
+        display: block;
+    }
+
+    .ordini_effettuati + ul li ol{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 0.5em;
+        grid-template-areas: "imm art uinf"
+                             "info info info";
+    }
+
+    .ordini_effettuati + ul li ol li button, .ordini_effettuati + ul li ol li dl dt{
+        display: block;
+    }
+
+    .ordini_effettuati + ul li ol li dl dt{
+        color: var(--titlecolor);
+        font-weight: bold;
+    }
+
+    .ordini_effettuati + ul li ol li:nth-child(4){
+        grid-area: uinf;
+    }
+
+    .ordini_effettuati + ul li ol li:nth-child(3){
+        grid-area: info;
+    }
+
+    .ordini_effettuati + ul li ol li .nascondi_ordine{
+        grid-gap: 0.5em;
+        opacity: 0;
+        margin: 0;
+        max-height: 1px;
+        overflow-y: hidden;
+        transition: opacity 0.5s ease-out;
+    }
+    
+    .ordini_effettuati + ul li ol li .mostra_ordine{
+        max-height: 100%;
+        opacity: 1;
+        grid-row: 2;
+        grid-column: 1/4;
+    }
+
+    .ordini_effettuati + ul li ol li .mostra_ordine dt:nth-of-type(1){
+        grid-column: 1/2;
+        grid-row: 1;
+    }
+
+    .ordini_effettuati + ul li ol li .mostra_ordine dd:nth-of-type(1){
+        grid-column: 1/2;
+        grid-row: 2;
+    }
+
+    .ordini_effettuati + ul li ol li .mostra_ordine dt:nth-of-type(2){
+        grid-column: 2/3;
+        grid-row: 1;
+    }
+
+    .ordini_effettuati + ul li ol li .mostra_ordine dd:nth-of-type(2){
+        grid-column: 2/3;
+        grid-row: 2;
+    }
+
+    .ordini_effettuati + ul li ol li .mostra_ordine dt:nth-of-type(3){
+        grid-column: 3/4;
+        grid-row: 1;
+    }
+
+    .ordini_effettuati + ul li ol li .mostra_ordine dd:nth-of-type(3){
+        grid-column: 3/4;
+        grid-row: 2;
+    }
+
+    .ordini_effettuati + ul li ol li button{
+        display: flex;
+        cursor: pointer;
+        align-self: center;
+        background-image: url(images/info_icon.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        text-indent: 200%;
+        line-height: 1em;
+        font-size: 2.5em;
+        max-width: 1em;
+        overflow: hidden;
+        border: none;
+        background-color: transparent;
+    }
+
+/*===================
+INDIRIZZO E PAGAMENTO
+===================*/
+
+#indirizzo_pagamento{
+    align-items: center;
+}
+
+#indirizzo_pagamento div{
+    flex-direction: column;
+}
+
+#indirizzo_pagamento div dt, #indirizzo_pagamento div dd{
+    text-align: center;
+}
+
+/*==============
+MODIFICA PROFILO
+==============*/
+
+    /*============
+    DATI PERSONALI
+    ============*/
+
+    .dati_personali > div{
+        flex-direction: column;
+    }
+
+    /*============
+    FORM INDIRIZZO
+    ============*/
+
+    .form_indirizzo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 1em;
+    }
+
+    /*======================
+    FORM METODO DI PAGAMENTO
+    ======================*/
+    .form_pagamento div + div + div {
+        flex-direction: column;
+        row-gap: 1em;
+    }
+
+    .form_pagamento div fieldset div div{
+        flex-direction: column;
+    }
+
+
+    /*=====
+    NEGOZIO
+    =====*/
+
+    .negozio li {
+        width: 100%;
+    }
+
+    /*=============
+    PAGINA PRODOTTO
+    =============*/
+
+    #pagina_prodotto{
+        flex-direction: column;
+    }
+
+    #pagina_prodotto div dl dd form > div{
+        width: 100%;
+        column-gap: 0.5em;
+    }
+
+    #pagina_prodotto div dl{
+        align-items: center;
+    }
+
+    #pagina_prodotto > div + div{
+        width: 100%;
+    }
+
+    #pagina_prodotto > div > dl{
+        padding-left: 0em;
+        border-left: none;
+        padding-top: 1em;
+        border-top: 1px solid var(--titlecolor);
+    }
+
+    #pagina_prodotto div dl dd dl{
+        align-items: center;
+    }
+
+    #pagina_prodotto div dl dd dl div{
+        flex-direction: column;
+    }
+
+        /*========
+        RECENSIONI
+        ========*/
+
+        #inserimento_recensione form textarea {
+            max-width: 10em
+        }
+        
+        #recensioni div{
+            flex-direction: column;
+        }
+
+        #recensioni div dl{
+            align-items: center;
+        }
+
+    /*=============
+    PAGINA CARRELLO
+    =============*/
+
+
+    #intestazione_carrello{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 0.5em;
+    }
+
+    #intestazione_carrello li:nth-child(4), #intestazione_carrello li:nth-child(5), #intestazione_carrello li:nth-child(6), #intestazione_carrello li:nth-child(7){
+        display: none;
+    }
+
+    #intestazione_carrello .informazioni_prodotto{
+        display: block;
+    }
+
+    #lista_carrello li ol{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 0.5em;
+        grid-template-areas: "imm art qta uinf"
+                             "info info info info";
+    }
+
+    #lista_carrello li ol li button, #lista_carrello li ol li dl dt{
+        display: block;
+    }
+
+    #lista_carrello li ol li dl dt{
+        color: var(--titlecolor);
+        font-weight: bold;
+    }
+
+    #lista_carrello li ol li:nth-child(5){
+        grid-area: uinf;
+    }
+
+    #lista_carrello li ol li:nth-child(4){
+        grid-area: info;
+    }
+
+    #lista_carrello li ol li dl.nascondi_ordine{
+        grid-gap: 0.5em;
+        opacity: 0;
+        margin: 0;
+        max-height: 1px;
+        overflow-y: hidden;
+        transition: opacity 0.5s ease-out;
+    }
+    
+    #lista_carrello li ol li dl.mostra_ordine{
+        max-height: 100%;
+        opacity: 1;
+        grid-row: 2;
+        grid-column: 1/4;
+    }
+
+    #lista_carrello li ol li button{
+        display: flex;
+        cursor: pointer;
+        align-self: center;
+        background-image: url(images/info_icon.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        text-indent: 200%;
+        line-height: 1em;
+        font-size: 2.5em;
+        max-width: 1em;
+        overflow: hidden;
+        border: none;
+        background-color: transparent;
+    }
+
+    #footer_carrello dl{
+        display: flex;
+        flex-direction: row;
+        column-gap: 1em;
+        align-items: center;
+        justify-content: center;
+    }
+
+    

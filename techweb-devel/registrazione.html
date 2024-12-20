@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="it">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Registrati - Jenny Saville</title>
+    <meta name="description" content="Questa pagina è dedicata alla registrazione al sito di Jenny Saville." />
+    <meta name="keywords" content="Registrati, registrazione, accesso, accedi, email, username, nome utente, password, Jenny Saville" />
+    <meta name="author" content="Alessia Domuta, Elena Pandolfo, Riccardo Rossi, Filippo Tonini"/>
+
+    <link rel="stylesheet" href="style.css" media="handheld, screen"/>
+
+    <link rel="stylesheet" href="tablet.css" media="handheld, screen and (min-width:601px) and (max-width:1024px), only screen and (min-width:601px) and (max-width:1024px)"/>
+    <link rel="stylesheet" href="mini.css" media="handheld, screen and (max-width:600px), only screen and (max-width:600px)"/>
+    <link rel="stylesheet" href="print.css" media="print"/>
+
+    <link rel="shortcut icon" type="image/png" href="images/logo0.png"/>
+
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="check-dati.js"></script>
+
+</head>
+
+
+
+<body>
+    <header>
+        <h1><span lang="en">Jenny Saville</span></h1>
+
+        <button id="menu_hamburger" onclick="toggleMobileMenu()" title="Mostra o nascondi il menù">Menù</button>
+    </header>
+
+    <nav id="menu" class="flex_row" aria-label="menu del sito">
+        <a class="navigationHelp" href="#primoContenuto">Salta il menù di navigazione</a>
+        <ul class="flex_row">
+            <li><a href="home.html"><span lang="en">HOME</span></a></li>
+            <li><a href="biografia.html">BIOGRAFIA</a></li>
+            <li><a href="opere.html">OPERE</a></li>
+            <li id="currentLink">REGISTRATI</li>
+            <li><a href="negozio.php"><span lang="en">SHOP</span></a></li>
+            <li><a href="carrello.php">CARRELLO </a></li>
+        </ul>
+    </nav>
+
+    <nav id="breadcrumb" aria-label="percorso">
+        <p>Ti trovi in: <a href="home.html"><span lang="en">Home</span></a> &gt; &gt; Registrati</p>
+    </nav>
+
+    <main>
+
+        <div id="primoContenuto" class="info info_piccolo">
+            <h2>Registrati</h2>
+            <form action="registrazione.php" method="post" id="validatedForm" onsubmit="submitRegistrazione(event)">
+                <messaggi/>
+                <label for="user_name" lang="en">Username</label>
+                <input type="text" id="user_name" name="username" onblur="validateUsername()"/>
+                <span class="error none" id="errore_user_name">Lo username può contenere solo lettere e numeri</span>
+
+                <label for="user_email" lang="en">Email</label>
+                <input type="text" id="user_email" name="email" onblur="validateEmail()"/>
+                <span class="error none" id="errore_email">Email non valida</span>
+
+                <label for="pass_old" lang="en">Password</label>
+                <input type="password" id="pass_old" name="password" onblur="validatePassword()"/>
+                <span class="error none" id="errore_pass_old">La <span lang='en'>password</span> deve contenere più di 8 caretteri tra questi deve esserci ameno una una lettera maiuscola, una lettera minuscola e un numero.</span>
+
+                <label for="pass_rep">Ripeti <span lang="en">password</span></label>
+                <input type="password" id="pass_rep" name="password_rep" onblur="validatePswConfirm()"/>
+                <span class="error none" id="errore_pass_rep">Le due password non corrispondono</span>
+
+                <input type="submit" class="infoButton" value="Registrami" name="submit"/>
+                <span class="error none" id="errore_submit">Alcuni campi dati potrebbero non essere corretti</span>
+
+            </form>
+
+            <p id="separatore" class="flex_row">Oppure</p>
+            <a href="login.php" class="infoButton formAltraOpzione" lang="en">Accedi</a>
+
+        </div>
+
+            <a href="#" id="torna_su" class="infoButton" aria-label="Torna su">&#x21E7;</a>
+    </main>
+
+
+    <footer id="footer" class="flex_column no_gap">
+        <div class="flex_column no_gap">
+            <p>Contatti</p>
+            <dl>
+                <dt>Scrivi una <span lang="en">e-mail</span>:</dt>
+                <dd><a href="mailto:assistenza@jennysaville.com">assistenza@jennysaville.com</a></dd>
+                <dt>Chiama:</dt>
+                <dd><a href="tel:1234567890">1234567890</a></dd>
+            </dl>
+        </div>
+        <p>Alessia Domuta, Elena Pandolfo, Riccardo Rossi, Filippo Tonini - <span lang="en">All rights Reserved</span></p>
+    </footer>
+
+</body>
+
+</html>

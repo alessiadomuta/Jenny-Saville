@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="it">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Home - Jenny Saville</title>
+    <meta name="description" content="Questa pagina è dedicata all'artista Jenny Saville. Nel sito sono descritte le opere, la biografia e si può accedere allo shop delle opere e dei gadget" />
+    <meta name="keywords" content="Jenny Saville, artista, arte concettuale, pittura, corpo, essere umano, bellezza, realtà deforme, imperfezioni, ritratto" />
+    <meta name="author" content="Alessia Domuta, Elena Pandolfo, Riccardo Rossi, Filippo Tonini"/>
+
+    <link rel="stylesheet" href="style.css" media="handheld, screen"/>
+
+    <link rel="stylesheet" href="tablet.css" media="handheld, screen and (min-width:601px) and (max-width:1024px), only screen and (min-width:601px) and (max-width:1024px)"/>
+    <link rel="stylesheet" href="mini.css" media="handheld, screen and (max-width:600px), only screen and (max-width:600px)"/>
+    <link rel="stylesheet" href="print.css" media="print"/>
+
+    <link rel="shortcut icon" type="image/png" href="images/logo0.png"/>
+
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+
+
+<body>
+    <header>
+        <h1><span lang="en">Jenny Saville</span></h1>
+
+        <button id="menu_hamburger" onclick="toggleMobileMenu()" title="Mostra o nascondi il menù">Menù</button>
+    </header>
+
+    <nav id="menu" class="flex_row" aria-label="menu del sito">
+        <a class="navigationHelp" href="#primoContenuto">Salta il menù di navigazione</a>
+        <ul class="flex_row">
+            <li id="currentLink" lang="en">HOME</li>
+            <li><a href="biografia.html">BIOGRAFIA</a></li>
+            <li><a href="opere.html">OPERE</a></li>
+            <li><a href="login.php">PROFILO</a></li>
+            <li><a href="negozio.php"><span lang="en">SHOP</span></a></li>
+            <li><a href="carrello.php">CARRELLO </a></li>
+        </ul>
+    </nav>
+
+    <nav id="breadcrumb" aria-label="percorso">
+        <p>Ti trovi in: <span lang="en">Home</span></p>
+    </nav>
+
+    <main>
+        <ul id="operehome" class="flex_row">
+            <li>L'opera si chiama <span lang="en">Propped</span>; è rappresentata una donna formosa, con tutte le sue imperfezioni in una posa seduta,languida. I colori sono molto realistici e vivi, e lo sfondo è neutro.</li>
+            <li>L'opera si chiama <span lang="en">Reverse</span> e rappresenta un volto umano riverso a terra. I colori sono caldi, viscerali. La bocca è intrisa di sangue e lo sguardo è fermo e determinato. </li>
+            <li>L'opera si chiama <span lang="en">Prop</span> e rappresenta una donna formosa, in una posizione dinamica questa volta. È seduta sulla sedia, sembra stia scivolando. I colori sono pallidi, e il corpo è messo in evidenza rispetto allo sfondo scuro.</li>
+            <li>L'opera si chiama <span lang="en">Odysseus</span>  e rappresenta un volto, dipinto in maniera non convenzionale: una via di mezzo tra figurativo e astratto. I colori dell'arcobaleno sono tutti presenti e insieme delineano il volto di una ragazza</li>
+            <li> L'opera si chiama Rosetta 2 ed è rappresentato un volto inclinato lateralmente. La varietà dei colori gravita attorno all'azzurro, al verde, al blu. La donna rappresentata appare quasi innaturale, gli occhi sono completamente azzurri, e l'espressione è vuota, stanca.</li>
+
+        </ul>
+
+        <div id="primoContenuto" class="info info_piccolo">
+                <h2 lang="en">Slogan</h2>
+                <p>
+                    &quot;Non sono contro l'<strong>arte concettuale</strong>. Non penso che la pittura debba essere rivalutata. L'arte rispecchia la vita, e le nostre vite sono piene di algoritmi,
+                    così molte persone vogliono fare arte come se fosse un algoritmo. Ma il mio linguaggio è la <strong>pittura</strong>, e la pittura è l'opposto. C'è qualcosa di primitivo in essa.
+                    Il bisogno di fare disegni è innato. È per questo che quando si è bambini si scarabocchia.&quot;
+                </p>
+                <p>
+                    Lo stile di Saville si può definire primordiale: sostiene che il più piccolo dettaglio di un <strong>corpo</strong> possa innescare il meccanismo di riconoscimento dell’<strong>essere umano</strong>.
+                    Per questo le sue rappresentazioni hanno poco a che fare con l’ideale rinascimentale di <strong>bellezza</strong> e di corpo.
+                    La sua arte è un tributo alle <strong>donne</strong>. Rappresenta una <strong>realtà deforme</strong>, ma allo stesso tempo glorifica il corpo della donna in tutte le sue perfette <strong>imperfezioni</strong>.
+                </p>
+                <p>
+                    L’artista esamina i volti delle donne e li esplora nel loro potenziale estetico. Si possono quasi definire impressioni: osserva i loro volti, e poi ne dipinge il ricordo, e a ogni pennellata li ricopre con i colori delle loro anime. 
+                    Per questo il processo creativo di Saville trascende dal semplice <strong>ritratto</strong>.
+
+                </p>
+
+                <div class="flex_row flex_wrap">
+                    <a href="biografia.html" class="infoButton">Scopri l'artista</a>
+                    <a href="opere.html" class="infoButton">Guarda le opere</a>
+                    <a href="negozio.php" class="infoButton">Acquista i prodotti</a>
+                </div>
+        </div>
+            <a href="#" id="torna_su" class="infoButton" aria-label="Torna su">&#x21E7;</a>
+    </main>
+
+
+    <footer id="footer" class="flex_column no_gap">
+        <div class="flex_column no_gap">
+            <p>Contatti</p>
+            <dl>
+                <dt>Scrivi una <span lang="en">e-mail</span>:</dt>
+                <dd><a href="mailto:assistenza@jennysaville.com">assistenza@jennysaville.com</a></dd>
+                <dt>Chiama:</dt>
+                <dd><a href="tel:1234567890">1234567890</a></dd>
+            </dl>
+        </div>
+        <p>Alessia Domuta, Elena Pandolfo, Riccardo Rossi, Filippo Tonini - <span lang="en">All rights Reserved</span></p>
+    </footer>
+
+</body>
+
+</html>

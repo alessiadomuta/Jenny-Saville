@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="it">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Art Gallery</title>
+    <meta name="description" content="Questa pagina è dedicata al login di un sito di una galleria d'arte." />
+    <meta name="keywords" content="Jenny Saville, artista" />
+    <meta name="author" content="Alessia Domuta, Elena Pandolfo, Riccardo Rossi, Filippo Tonini"/>
+
+    <link rel="stylesheet" href="style_grid.css" media="handheld, screen"/>
+
+    <link rel="stylesheet" href="mini.css" media="handheld, screen and (max-width:600px), only screen and (max-width:600px)"/>
+    <link rel="stylesheet" href="print.css" media="print"/>
+
+    <link rel="shortcut icon" type="image/png" href="images/logo0.png"/>
+    <script src="registrazione.js"></script>
+</head>
+
+
+
+<body id="HomePage">
+    <header>
+        <h1><span lang="en">Art Gallery</span></h1>
+        <h2><span lang="en">Jenny Saville</span></h2>
+    </header>
+
+    <nav id="breadcrumb" aria-label="percorso">
+        <p>Ti trovi in: <a href="home.html"><span lang="en">Home</span></a> &gt; &gt; Area personale</p>
+    </nav>
+
+    <nav id="menu" aria-label="menu del sito">
+        <a class="navigationHelp" href="#breakinkNews">Salta il menù di navigazione</a>
+        <ul id="menusx">
+            <li><a href="home.html"><span lang="en">HOME</span></a></li>
+            <li><a href="biografia.html">BIOGRAFIA</a></li>
+            <li><a href="opere.html">OPERE</a></li>
+        </ul>
+        <ul id="menudx">
+            <li id="currentLink">AREA&nbsp;PERSONALE</li>
+            <li><a href="negozio.html"><span lang="en">SHOP</span></a></li>
+            <li id="carrello"><a href="carrello.html">CARRELLO </a></li>
+            
+        </ul>
+    </nav>
+
+    <main id="login">
+        <h1 id="titolo"><span lang="en">Area personale - Jenny Saville</span></h1>
+
+
+
+        <div id="primoContenuto" class="info">
+            <h2 class="smallh2">Registrati</h2>
+            <form action="#" method="post" id="validatedForm">
+                <messaggi/>
+
+                <label for="user_name" lang="en">Nome</label>
+                <input type="text" id="user_name" name="username" onblur="return validateUsername()"/>
+                <span class="error none" id="username-message"> Lo username può contentere solo numeri o lettere maiuscole o minuscole </span>
+
+                <label for="user_email" lang="en">Email</label>
+                <input type="text" id="user_email" name="email" onblur="return validateEmail()"/>
+                <span class="error none" id="email-message"> L'email non è valida </span>
+
+                <label for="pass_old" lang="en">Password</label>
+                <input type="password" id="pass_old" name="password" onblur="return validatePassword()"/>
+                <ul class="error none" id="psw-message"> La password deve contenere: 
+                    <li>almeno una lettera maiuscola</li>
+                    <li>almeno una lettera minuscola</li>
+                    <li>almeno un numero</li>
+                    <li>più di 8 caratteri</li>
+                </ul>
+
+                <label for="pass_rep">Ripeti <span lang="en">password</span></label>
+                <input type="password" id="pass_rep" name="password_rep" onblur="return validatePswConfirm()"/>
+                <span class="error none" id="pswrep-message">Le due password non corrispondono</span>
+                
+                <input type="submit" value="Registrami" name="submit"/>
+
+            </form> 
+                <p id="separatore">Oppure</p>
+                <a href="login.html" class="formAltraOpzione" lang="en">Login</a>
+            
+        </div>
+
+        <div class="gotop">
+            <a href="#" aria-label="Torna su">⇪</a>
+        </div>
+
+
+        
+</main>
+
+
+<footer>
+    <img class="imgValidCode" src="images/valid-xhtml10.png" alt="HTML valido">
+    <p>Alessia Domuta, Elena Pandolfo, Riccardo Rossi, Filippo Tonini - <span lang="en">All rights Reserved</span></p>
+    <img class="imgValidCode" src="images/vcss-blue.gif" alt="CSS valido ">
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,1468 @@
+*{
+    padding: 0em;
+    margin: 0em;
+}
+
+/*===================================
+DEFINIZIONE DI VARIABILI PER I COLORI
+===================================*/
+:root{
+    --bgcolor: #161616;
+    --htmlbgcolor: #202020;
+    --txtcolor: #e1e1e1;
+    --footertextcolor: #1e1e1e;
+    --breadcolor: #e1e1e1;
+    --breadtextcolor: #cb5c62;
+    --linkcolor: #ffdcc8;
+    --visitedcolor: #446688;
+    --titlecolor: #cb5c62;
+    --positivemessage: #45B457;
+    --errorcolor: #D8544E;
+}
+
+/*=========
+HTML, BODY
+=========*/
+
+html, body{
+    font-size: 100%;
+    font-family: "Helvetica", sans-serif;
+    line-height: 1.5em;
+    background-color: var(--bgcolor);
+    color: var(--txtcolor);
+}
+
+abbr{
+    text-decoration: none;
+}
+
+/*===
+HTML
+===*/
+
+html{
+    background-color: var(--htmlbgcolor);
+    background-size: contain;
+}
+
+/*===
+BODY
+===*/
+
+body{
+    max-width: 1024px;
+    margin: auto;
+    background-color: var(--bgcolor);
+    box-shadow: 0px 0px 0px 5px var(--bgcolor);
+}
+
+body{
+    display: grid;
+    grid-template-areas: "h m"
+                         "b b"  
+                         "c c" 
+                         "f f";
+    align-items: center;
+    justify-content: space-between;                 
+}
+
+/*====
+HEADER
+====*/
+
+header{
+    grid-area: h;
+    color: var(--txtcolor);
+    text-align: center;
+    padding: 1.0em;
+}
+
+header h1{
+    background-image: url(images/logo_white.png); 
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+    text-indent: -9999px;
+    line-height: 1.5em;
+    font-size: 6em;
+    width: 3em;
+}
+
+#menu_hamburger{
+    display: none;
+}
+
+/*========
+BREADCRUMB
+========*/
+
+#breadcrumb{
+    grid-area: b;
+    color: var(--breadtextcolor);
+    font-size: 1.1em;
+    padding: 0.5em 1.0em;
+    border-top: 1px solid var(--breadcolor);
+    border-bottom: 1px solid var(--breadcolor);
+    font-weight: bold;
+    min-width: 14pt;
+}
+
+#breadcrumb a:link{
+    color: var(--linkcolor);
+}
+
+#breadcrumb a:visited{
+    color: var(--visitedcolor);
+}
+
+/*====================
+AIUTI ALLA NAVIGAZIONE
+====================*/
+
+.navigationHelp {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+/*==
+MENU
+==*/
+
+#menu {
+    grid-area: m;
+    text-align: center;
+    text-decoration: none;
+    justify-content: right;
+    margin-bottom: 4em;
+}
+
+#menu ul{
+    justify-content: start;
+    border-bottom: 1px solid var(--breadcolor);
+    list-style-type: none;
+}
+
+#menu ul li{
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    min-width: 14pt;
+}
+
+#menu ul li:hover{
+    background-color: black;
+    border-radius: 0.5em;
+}
+
+#menu ul #currentLink{
+    color: var(--breadtextcolor);
+    padding: 0.5em 1em;
+    border: 1px solid var(--breadcolor);
+    background-color: transparent;
+    border-bottom: none;
+    border-radius: 0;
+}
+
+#menu ul li a{
+    display: block;
+    padding: 0.5em;
+    text-decoration: none;
+}
+
+#menu ul li a:link{
+    color: var(--linkcolor);
+}
+
+#menu ul li a:visited{
+    color: var(--visitedcolor);
+}
+
+/*==
+MAIN
+==*/
+
+main{
+    grid-area: c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*=======
+CONTENUTO
+=======*/
+
+.info {
+    width: 80%;
+    border-radius: 2em;
+    padding: 2em 2em;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    align-content: center;
+    box-shadow: rgba(255, 255, 255, 0.038) 0em 1em 2em 0em;
+}
+
+.info_piccolo {
+    width: 55%;
+    border-radius: 1.5em;
+    padding: 1.5em;
+}
+
+.info_mini {
+    width: 40%;
+    border-radius: 1em;
+    padding: 1em;
+}
+
+.info h2, .info h3, .info h4, h2{
+    color: var(--titlecolor);
+    text-align: center;
+    padding-bottom: 0.5em;
+}
+
+.info h2, h2{
+    line-height: 1.4em;
+    font-size: 2.5em;
+} 
+
+.info h3{
+    font-size: 1.5em;
+} 
+
+.info h4{
+    padding-top: 1em;
+    font-size: 1.5em;
+} 
+
+.info p{
+    text-align: center;
+    color: var(--txtcolor);
+    font-size: 1.2em;
+    padding-bottom: 1em;
+}
+
+    /*=====
+    BOTTONI
+    =====*/
+
+    .infoButton{
+        display: block;
+        margin: 0.6em auto;
+        font-weight: bold;
+        text-align: center;
+        color: var(--bgcolor);
+        border: 2px solid var(--bgcolor);
+        border-radius: 1em;
+        width: auto;
+        padding: 0.5em ;
+        background: var(--breadtextcolor);
+        font-size: 1.2em;
+        text-decoration: none;
+    }
+    .infoButton:link{
+        border: 2px solid var(--linkcolor);
+        color: var(--linkcolor);
+    }
+
+    .infoButton:visited{
+        border: 2px solid var(--bgcolor);
+        color: var(--bgcolor);
+    }
+
+
+/*=========
+TORNA SOPRA
+=========*/
+
+#torna_su {
+    border-radius: 0.8em;
+    margin: 0.5em auto 1.5em auto;
+}
+
+/*====
+FOOTER
+====*/
+
+footer{
+    grid-area: f;
+    border-top: 1px solid var(--breadcolor) ;
+    background-color: var(--bgcolor);
+    color: var(--txtcolor);
+    text-align: center;
+}
+
+footer > div > p, footer a{
+    font-weight: bold;
+}
+
+footer > div{
+    padding: 1em 0em;
+}
+
+footer div + p{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a:link{
+    color: var(--linkcolor);
+}
+
+footer a:visited{
+    color: var(--visitedcolor);
+}
+
+footer > p{
+    font-weight: normal;
+    display: inline;
+    font-style: italic;
+    font-size: 0.8em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+    /*=======
+    OPEREHOME
+    =======*/
+
+    #operehome{
+        column-gap: 0em;
+        border: 1px solid var(--breadcolor);
+        list-style-type: none;
+        margin: 1em 0;
+    }
+
+    #operehome li{
+        line-height: 18em;
+        object-fit: contain;
+        text-indent: -9999px;
+        width: 100%;
+    }
+
+    #operehome li:nth-child(1){
+        background: url("images/opera1.png") no-repeat;
+        background-size: cover;
+    }
+
+    #operehome li:nth-child(2){
+        background: url("images/opera7.png") no-repeat;
+        background-size: cover;
+    }
+
+    #operehome li:nth-child(3){
+        background: url("images/opera2.png") no-repeat;
+        background-size: cover;
+    }
+
+    #operehome li:nth-child(4){
+        background: url("images/opera4.png") no-repeat;
+        background-size: cover;
+    }
+
+    #operehome li:nth-child(5){
+        background: url("images/opera8.png") no-repeat;
+        background-size: cover;
+    }
+
+
+    /*=======
+    BIOGRAFIA
+    =======*/
+
+    #biografia{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas: "img bio ";
+    }
+
+    #biografia img{
+        grid-area: img;
+        padding: 1em;
+        width: 90%;
+    }
+
+    #biografia dl{
+        grid-area: bio;
+        padding: 1em;
+        display: grid;
+        grid-template-columns: 1fr 5fr 1fr;
+    }
+
+    #biografia dl dt, #biografia dl dd{
+        padding-top: 1em;
+        border-bottom: 3px solid var(--breadcolor);
+    }
+
+    #biografia dl dt:nth-of-type(2n-1){
+        grid-column: 1/2;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    #biografia dl dd:nth-of-type(2n-1){
+        grid-column: 2/4;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    #biografia dl dt:nth-of-type(2n){
+        grid-column: 3/4;
+        grid-row: inherit;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+    }
+
+    #biografia dl dd:nth-of-type(2n){
+        grid-column: 1/3;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    #biografia dl dt{
+        font-weight: bold;
+        font-size: 2em;
+        line-height: normal;
+        padding: 0.25em;
+    }
+
+    #biografia dl dt:nth-of-type(2n){
+        padding-left: 1em;
+    }
+
+    #biografia dl dt:nth-of-type(2n-1){
+        padding-right: 1em;
+    }
+
+    #biografia dl dd{
+        padding: 0.5em;
+    }
+
+
+    /*===
+    OPERE
+    ===*/
+
+    #opere {
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 2em;
+        grid-template-areas: "o13 o13 o13 o13 o13 o4  o4  o7  o7  o7"
+                            "o13 o13 o13 o13 o13 o4  o4  o7  o7  o7"
+                            "o1  o1  o1  o1  o1  o4  o4  o7  o7  o7"
+                            "o1  o1  o1  o1  o1  o6  o6  o6  o6  o6"
+                            "o2  o2  o3  o3  o8  o8  o9  o9  o19 o19"
+                            "o5  o5  o5  o5  o16 o16 o16 o16 o14 o14"
+                            "o5  o5  o5  o5  o17 o17 o17 o17 o18 o18";
+    }
+
+    #opere li{
+        transition: all 0.5s ease-in-out;
+        padding: 0.3em;
+        border: solid 2px var(--linkcolor);
+    }
+
+    #opere li a {
+        text-decoration: none;
+    }
+
+    #opere li a:link span{
+        border: 2px solid var(--linkcolor);
+        color: var(--linkcolor);
+    }
+
+    #opere li a:visited span{
+        border: 2px solid var(--bgcolor);
+        color: var(--bgcolor);
+    }
+
+    #opere li a img{
+        width: 100%;     
+        height: 100%;
+        position: relative;
+        z-index: 2;
+        object-fit: cover;
+        resize: both;
+    }
+
+    #opere li a span{
+        position: relative;
+        top: -4em;
+    }
+
+    #opere li:hover a span{
+        z-index: 3;
+    }
+
+    #opere:hover  > :not(:hover){
+        opacity: 0.5;
+    }
+
+    #opera1{
+        grid-area: o1;
+    }
+
+    #opera2{
+        grid-area: o2;
+    }
+
+    #opera3{
+        grid-area: o3;
+    }
+
+    #opera4{
+        grid-area: o4;
+    }
+
+    #opera5{
+        grid-area: o5;
+    }
+
+    #opera6{
+        grid-area: o6;
+    }
+
+    #opera7{
+        grid-area: o7;
+    }
+
+    #opera8{
+        grid-area: o8;
+    }
+
+    #opera9{
+        grid-area: o9;
+    }
+
+    #opera13{
+        grid-area: o13;
+    }
+
+    #opera14{
+        grid-area: o14;
+    }
+
+    #opera16{
+        grid-area: o16;
+    }
+
+    #opera17{
+        grid-area: o17;
+    }
+
+    #opera18{
+        grid-area: o18;
+    }
+
+    #opera19{
+        grid-area: o19;
+    }
+
+        /*===
+        OPERA
+        ===*/
+
+        #pagina_opera{
+            width: 100%;
+        }
+
+        #pagina_opera > div{
+            column-gap: 2em;
+            width: 100%;
+        }
+
+        #pagina_opera > div > img{
+            width: 60%;
+        }
+
+        #pagina_opera p{
+            font-size: 1.2em;
+            line-height: 1.5em;
+            padding-bottom: 0;
+        }
+
+        #pagina_opera dl{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        #pagina_opera dl dt, #pagina_opera dl dd{
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+        }
+
+        #pagina_opera dl dt{
+            grid-column: 1/2;
+            font-weight: bold;
+            padding-right: 0.5em;
+            justify-content: flex-start;
+        }
+
+        #pagina_opera dl dd{
+            grid-column: 2/3;
+            justify-content: flex-end;
+        }
+
+    /*==
+    FORM
+    ==*/
+
+    form{
+        text-align: center;
+    }
+
+    form input, form label, form select{
+        display: block;
+        font-size: 1.2em;
+    }
+
+    form label {
+        font-weight: bold;
+        margin-bottom: 0.2em;
+    }
+
+    input[type="text"], input[type="number"], input[type="password"] {
+        border-radius: 1em;
+        border: 2px solid transparent;
+        width: 50%;
+        padding: 0.5em;
+        margin: 0em auto;
+        margin-bottom: 2em;
+    }
+
+    input[type="submit"]{
+        width: 30%;
+        cursor: pointer;
+    }
+
+    .formAltraOpzione{
+        width: 30%;
+    }
+
+    .error {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 0.5em;
+        background-color: var(--errorcolor);
+        color: var(--bgcolor);
+        padding: 1em;
+        border-radius: 10px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .none {
+        display: none;
+    }
+
+    /*=======================
+    LOGIN/PROFILO e REGISTRATI
+    =======================*/
+
+    #separatore{
+        font-size: 1.2em;
+        margin: 2em 0em;
+    }
+
+    #separatore::before, #separatore::after{ 
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: var(--txtcolor);
+        margin: auto;
+    }
+
+    /*============
+    AREA PERSONALE
+    ============*/
+
+    #datiprofilo dt{
+        color: var(--titlecolor);
+        font-weight: bold;
+        text-align: center;
+    }
+
+    #datiprofilo > dt{
+        font-size: 1.5em;
+    }
+
+    #datiprofilo img{
+        margin-top: 0.5em;
+        width: 8em;
+        height: 8em;
+        border-radius: 50%;
+    }
+
+    #datiprofilo dd{
+        text-align: center;
+    }
+
+    #foto_profilo{
+        position: absolute;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px);
+    }
+
+    .info .numero_ordine{
+        padding-top: 1em;
+    }
+
+    .info .numero_ordine p{
+        font-weight: bold;
+        padding-bottom: 0.5em;
+    }
+    
+    .ordini_effettuati{
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+        grid-gap: 1em;
+        justify-items: center;
+        align-items: center;
+        list-style-type: none;
+        border-bottom: 1px solid var(--titlecolor);
+    }
+
+    .ordini_effettuati li {
+        padding: 0.5em 0em;
+        color: var(--titlecolor);
+        font-weight: bold;
+    }
+
+    .ordini_effettuati + ul{
+        list-style-type: none;
+    }
+
+    .ordini_effettuati + ul > li{
+        border-bottom: 1px solid var(--txtcolor);
+        width: 100%;
+    }
+
+    .ordini_effettuati + ul li ol{
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+        grid-gap: 1em;
+        justify-items: center;
+        align-items: center;
+        list-style-type: none;
+    }
+
+    .ordini_effettuati + ul li ol li{
+        border: none;
+    }
+
+    .ordini_effettuati + ul li ol li img{
+        width: 100%;
+        height: auto;
+        max-width: 12em;
+    }
+
+    .ordini_effettuati + ul li ol li:nth-child(3){
+        grid-column: 3/6;
+        width: 100%;
+    }
+
+    .ordini_effettuati + ul li ol li dl{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1em;
+        justify-items: center;
+        align-items: center;
+        list-style-type: none;
+    }
+
+    .ordini_effettuati + ul li ol li button, .ordini_effettuati + ul li ol li dl dt{
+        display: none;
+    }
+
+    .informazioni_prodotto{
+        display: none;
+    }
+
+
+    /*==============
+    MODIFICA PROFILO
+    ==============*/
+
+    .modifica_dati div input, .modifica_dati div label, .modifica_dati input[type="submit"]{
+        margin: 0;
+    }
+
+    .modifica_dati input[type="submit"]{
+        width: auto;
+    }
+
+    #cambio_immagine_profilo img{
+        width: 8em;
+        height: 8em;
+        border-radius: 50%;
+    }
+
+    #cambio_immagine_profilo label{
+        cursor: pointer;
+    }
+
+    .modifica_dati > fieldset > legend{
+        color: var(--titlecolor);
+        padding-bottom: 0.5em;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .modifica_dati > fieldset{
+        width: 100%;
+        border: none;
+        text-align: center;
+        border-bottom: 1px solid var(--titlecolor);
+    }
+
+        /*============
+        DATI PERSONALI
+        ============*/
+
+        .dati_personali{
+            padding-bottom: 1em;
+            margin-bottom: 1em;
+        }
+
+        .dati_personali legend{
+            position: absolute;
+            height: 1px;
+            width: 1px;
+            overflow: hidden;
+            clip: rect(1px, 1px, 1px, 1px);
+        }
+
+        /*============
+        FORM INDIRIZZO
+        ============*/
+
+        .form_indirizzo{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1em;
+            grid-template-areas: "leg leg"
+                                 "pr ci"
+                                 "cap in"
+                                 "ncv nct";
+            padding-bottom: 1em;
+            margin-bottom: 1em;
+        }
+
+        .form_indirizzo legend{
+            grid-area: leg;
+            margin: auto;
+        }
+
+        .form_indirizzo div:nth-of-type(1){
+            grid-area: pr;
+        }
+        
+        .form_indirizzo div:nth-of-type(2){
+            grid-area: ci;
+        }
+        
+        .form_indirizzo div:nth-of-type(3){
+            grid-area: cap;
+        }
+        
+        .form_indirizzo div:nth-of-type(4){
+            grid-area: in;
+        }
+        
+        .form_indirizzo div:nth-of-type(5){
+            grid-area: ncv;
+        }
+        
+        .form_indirizzo div:nth-of-type(6){
+            grid-area: nct;
+        }
+
+        /*======================
+        FORM METODO DI PAGAMENTO
+        ======================*/
+
+        .form_pagamento{
+            padding-bottom: 1em;
+            margin-bottom: 1em;
+        }
+
+        .form_pagamento div, .form_pagamento div fieldset{
+            width: 100%;
+        }
+        
+        .form_pagamento div fieldset{
+            border: none;
+        }
+
+        .form_pagamento div fieldset legend{
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .form_pagamento legend{
+            margin: auto;
+        }
+
+        .form_pagamento div fieldset div label{
+            font-weight: normal;
+        }
+
+    /*=====
+    NEGOZIO
+    =====*/
+
+    .negozio{
+        justify-content: space-around;
+        list-style-type: none;
+    }
+
+    .negozio li {
+        position: relative;
+        width: 27%;
+        border-radius: 1em;
+        box-shadow: rgb(0 0 0 / 20%) 0px 12px 28px 0px, rgb(0 0 0 / 10%) 0px 2px 4px 0px, rgb(255 255 255 / 5%) 0px 0px 0px 1px inset;
+        padding: 0.5em;
+        margin: 1em;
+    }
+
+    .negozio li img{
+        display: block;
+        margin: auto;
+        width: 100%;
+        height: auto;
+        border-radius: 1em;
+    }
+
+    .negozio li p{
+        padding: 0.5em;
+        color: var(--titlecolor);
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .negozio li p + p{
+        color: var(--txtcolor);
+        text-align: center;
+        font-size: 1.1em;
+    }
+
+        
+    /*=============
+    PAGINA PRODOTTO
+    =============*/
+
+    #pagina_prodotto > div{
+        width: 55%;
+    }
+
+    #pagina_prodotto > div + div{
+        width: 45%;
+    }
+
+    #pagina_prodotto > div > img{
+        max-width: 100%;
+    }
+
+    #pagina_prodotto div dl{
+        align-items: flex-start;
+    }
+
+    #pagina_prodotto > div > dl{
+        padding-left: 1em;
+        border-left: 1px solid var(--titlecolor);
+    }
+
+    #pagina_prodotto div dl dt{
+        font-weight: bold;
+    }
+
+    #pagina_prodotto > div > dl > dt{
+        color: var(--titlecolor);
+    }
+
+    #pagina_prodotto div dl dd ol{
+        list-style-type: none;
+    }
+
+    #pagina_prodotto div dl dd form{
+        align-items: flex-start;
+    }
+
+    #pagina_prodotto div dl dd form input[type="submit"]{
+        width: auto;
+    }
+
+    #pagina_prodotto div dl dd form div label{
+        color: var(--titlecolor);
+        margin: 0;
+        font-size: 1em;
+    }
+
+    #info_prodotto{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #info_prodotto dd{
+        text-align: right;
+    }
+
+    .seleziona_modello img{
+        max-width: 100%;
+        border: 1px solid var(--txtcolor);
+        border-radius: 1em;
+    }
+
+    .seleziona_modello img:hover {
+        cursor: pointer;
+        border-color: var(--breadtextcolor);
+        box-shadow: 0px 1px 5px 1px var(--breadtextcolor);
+    }
+
+    .seleziona_modello [type=radio] { 
+        position: absolute;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px);
+    }
+
+    .seleziona_modello [type=radio]:checked + img{
+        border-color: var(--breadtextcolor);
+        box-shadow: 0px 1px 4px 2px var(--breadtextcolor);
+    }
+
+    #pagina_prodotto div dl dd dl div dd{
+        padding-left: 0.5em;
+    }
+
+        /*========
+        RECENSIONI
+        ========*/
+
+        #inserimento_recensione img{
+            width: 8em;
+            height: 8em;
+            border-radius: 50%;
+        }
+
+        #inserimento_recensione p{
+            font-size: 1.2em;
+            padding-bottom: 0;
+        }
+
+        #inserimento_recensione form input{
+            width: auto;
+        }
+
+        #inserimento_recensione form textarea{
+            max-width: 40em;
+            background: var(--bgcolor);
+            border-color: var(--titlecolor);
+            padding: 1em;
+            color: var(--txtcolor);
+            font-size: 1.2em;
+            line-height: 1.2em;
+        }
+
+        #inserimento_recensione{
+            border-bottom: 1px solid var(--titlecolor);
+            margin-bottom: 1em;
+        }
+
+        #stelle_recensione{
+            flex-direction: row-reverse;
+        }
+        
+        #stelle_recensione input[type=radio] {
+            display: none;
+        }
+
+        #stelle_recensione input[type=radio] + .voto_prodotto::before {
+        content: "☆";
+        color: var(--titlecolor);
+        font-weight: normal;
+        }
+
+        #stelle_recensione input[type=radio]:checked ~ .voto_prodotto::before {
+        content: "★";
+        color: var(--titlecolor);
+        font-weight: normal;
+        }
+
+        #recensioni img{
+            width: 8em;
+            height: 8em;
+            border-radius: 50%;
+        }
+
+        #recensioni div{
+            justify-content: flex-start;
+            column-gap: 2em;
+            width: 65%;
+        }
+
+        #recensioni div dl{
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        #recensioni p, #recensioni ol{
+            color: var(--titlecolor);
+        }
+
+        #recensioni ol{
+            list-style-type: none;
+        }
+
+        #recensioni div dl dd:nth-of-type(1){
+            font-weight: bold;
+        }
+
+    /*=============
+    PAGINA CARRELLO
+    =============*/
+
+    #intestazione_carrello{
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 1em;
+        justify-items: center;
+        align-items: center;
+        list-style-type: none;
+        border-bottom: 1px solid var(--titlecolor);
+    }
+
+    #intestazione_carrello li {
+        padding: 0.5em 0em;
+        color: var(--titlecolor);
+        font-weight: bold;
+    }
+
+    #lista_carrello{
+        list-style-type: none;
+    }
+
+    #lista_carrello > li{
+        border-bottom: 1px solid var(--txtcolor);
+        width: 100%;
+    }
+
+    #lista_carrello li ol{
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 1em;
+        justify-items: center;
+        align-items: center;
+        list-style-type: none;
+    }
+
+    #lista_carrello li ol li{
+        border: none;
+    }
+
+    #lista_carrello li ol li img{
+        width: 100%;
+        height: auto;
+        max-width: 12em;
+    }
+
+    #lista_carrello li ol li:nth-child(4){
+        grid-column: 4/8;
+        width: 100%;
+    }
+
+    #lista_carrello li ol li dl{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 1em;
+        justify-items: center;
+        align-items: center;
+        list-style-type: none;
+    }
+
+    #lista_carrello li ol li button, #lista_carrello li ol li dl dt{
+        display: none;
+    }
+
+    #lista_carrello li ol li label{
+        position: absolute;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px);
+    }
+
+    #lista_carrello li ol li input{
+        margin: auto;
+    }
+
+    #lista_carrello li ol .rimuoviArticolo{
+        color: var(--linkcolor);
+        background-image: url(images/cestino.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+
+    #lista_carrello li ol .rimuoviArticolo a{
+        color: var(--linkcolor);
+        display: block;
+        width: 1.5em;
+        text-indent: -9999px;
+        overflow: hidden;
+    }
+
+    #footer_carrello dl {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 1em;
+        justify-items: center;
+        align-items: center;
+        grid-template-areas: ". . . . tot num .";
+        font-weight: bold;
+        padding-top: 1em;
+    }
+
+    #footer_carrello dl dt {
+        grid-area: tot;
+    }
+
+    #footer_carrello dl dd {
+        grid-area: num;
+    }
+
+    
+    /*==============
+    RIEPILOGO ORDINE
+    ==============*/
+
+    #intestazione_riepilogo{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+        grid-gap: 1em;
+        justify-items: center;
+        align-items: center;
+        list-style-type: none;
+        border-bottom: 1px solid var(--titlecolor);
+    }
+
+    #intestazione_riepilogo li {
+        color: var(--titlecolor);
+        font-weight: bold;
+    }
+
+    #lista_riepilogo{
+        justify-content: space-between;
+        list-style-type: none;
+    }
+
+    #lista_riepilogo > li{
+        border-bottom: 1px solid var(--txtcolor);
+    }
+
+    #lista_riepilogo li ol{
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+        grid-gap: 1em;
+        justify-items: center;
+        align-items: center;
+        list-style-type: none;
+    }
+
+    #lista_riepilogo li ol li img{
+        width: 100%;
+        height: auto;
+    }
+
+    #totale_acquisto{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #totale_acquisto dt{
+        font-weight: bold;
+        padding-right: 0.5em;
+        text-align: left;
+    }
+
+    #totale_acquisto dd{
+        text-align: right;
+    }
+
+    #totale_acquisto{
+        width: 65%;
+        justify-content: space-between;
+    }
+
+    /*===================
+    INDIRIZZO E PAGAMENTO
+    ===================*/
+
+    #indirizzo + dd dl{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #indirizzo + dd dl dt{
+        text-align: left;
+    }
+
+    #indirizzo + dd dl dd{
+        text-align: right;
+    }
+
+    #pagamento + dd dl dt{
+        text-align: left;
+    }
+
+    #pagamento + dd dl dd{
+        text-align: right;
+    }
+    
+    #pagamento + dd dl{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #indirizzo_pagamento{
+        align-items: flex-start;
+    }
+
+    #indirizzo_pagamento > div{
+        padding: 2em;
+    }
+
+    #indirizzo_pagamento > div > dt{
+        font-size: 1.5em;
+    }
+    
+    #indirizzo_pagamento div dt{
+        font-weight: bold;
+        color: var(--titlecolor);
+    }
+
+    #indirizzo_pagamento > div > dd > dl{
+        align-items: flex-start;
+    }
+
+    #indirizzo_pagamento > div > dd > dl > div{
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #indirizzo_pagamento > div:nth-child(1) > dd > dl > div{
+        column-gap: 7em;
+    }
+
+    /*================
+    MESSAGGIO POSITIVO
+    ================*/
+
+    .positivo{
+        background-color: var(--positivemessage);
+        box-shadow: rgba(255, 255, 255, 0.15) 0em 1em 2em 0em;
+    }
+
+    .positivo p{
+        text-align: center;
+        padding-bottom: 0;
+        color: var(--bgcolor);
+    }
+
+    /*====================
+    ERRORE 404, ERRORE 500
+    ====================*/
+
+    .errore404 h2{
+        background-image: url(images/errore404.png);
+    }
+
+    .errore500 h2{
+        background-image: url(images/errore500.png);
+    }
+
+    .errore404 h2, .errore500 h2{
+        background-repeat: no-repeat;
+        background-size: contain;
+        min-height: 8em;
+        background-position: center;
+        text-indent: -99999em;
+        font-size: 3em;
+    }
+
+    .errore404 p, .errore500 p{
+        text-align: center;
+        padding: 0.5em;
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+    .errore404 p + p, .errore500 p + p{
+        padding: 0.5em;
+        font-size: 1.5em;
+        font-weight: normal;
+    }
+
+    .errore404 p + p + p, .errore500 p + p + p{
+        font-size: 1.2em;
+        font-weight: normal;
+    }
+
+/*======
+GENERALI
+======*/
+
+.flex_row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1em;
+}
+
+.flex_column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1em;
+}
+
+.flex_wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.no_gap{
+    row-gap: 0em;
+    column-gap: 0em;
+}
+

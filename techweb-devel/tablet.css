@@ -1,0 +1,84 @@
+
+/*===
+BODY
+===*/
+
+body{
+    grid-template-areas: "h h" 
+                         "m m"
+                         "b b"  
+                         "c c" 
+                         "f f";  
+}
+
+/*====
+HEADER
+====*/
+
+header{
+    margin: auto;
+}
+
+/*========
+BREADCRUMB
+========*/
+
+#breadcrumb{
+    border-top: none;
+}
+
+/*==
+MENU
+==*/
+
+#menu {
+    margin: 0;
+}
+
+#menu ul{
+    width: 100%;
+    justify-content: space-between;
+    column-gap: 0em;
+}
+
+/*=======
+CONTENUTO
+=======*/
+
+.info_mini {
+    width: 55%;
+}
+
+    /*=======
+    OPEREHOME
+    =======*/
+    
+    #operehome li{
+        line-height: 12em;
+    }
+
+
+    /*=====
+    NEGOZIO
+    =====*/
+
+    .negozio li {
+        width: 35%;
+    }
+
+    /*=============
+    PAGINA CARRELLO
+    =============*/
+
+    #intestazione_carrello{
+        grid-gap: 0.5em;
+    }
+
+    #lista_carrello li ol{
+        grid-gap: 0.5em;
+    }
+
+    #footer_carrello dl{
+        grid-gap: 0.5em;
+    }
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="it">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Pagina non trovata - Jenny Saville</title>
+    <meta name="description" content="Questa pagina è dedicata all'errore 404 del sito di Jenny Saville." />
+    <meta name="keywords" content="error404, errore404, pagina non trovata, errore, Jenny Saville" />
+    <meta name="author" content="Alessia Domuta, Elena Pandolfo, Riccardo Rossi, Filippo Tonini"/>
+
+    <link rel="stylesheet" href="style.css" media="handheld, screen"/>
+
+    <link rel="stylesheet" href="tablet.css" media="handheld, screen and (min-width:601px) and (max-width:1024px), only screen and (min-width:601px) and (max-width:1024px)"/>
+    <link rel="stylesheet" href="mini.css" media="handheld, screen and (max-width:600px), only screen and (max-width:600px)"/>
+    <link rel="stylesheet" href="print.css" media="print"/>
+
+    <link rel="shortcut icon" type="image/png" href="images/logo0.png"/>
+
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+
+
+<body>
+    <header>
+        <h1><span lang="en">Jenny Saville</span></h1>
+
+        <button id="menu_hamburger" onclick="toggleMobileMenu()" title="Mostra o nascondi il menù">Menù</button>
+    </header>
+
+    <nav id="menu" class="flex_row" aria-label="menu del sito">
+        <a class="navigationHelp" href="#primoContenuto">Salta il menù di navigazione</a>
+        <ul class="flex_row">
+            <li><a href="home.html"><span lang="en">HOME</span></a></li>
+            <li><a href="biografia.html">BIOGRAFIA</a></li>
+            <li><a href="opere.html">OPERE</a></li>
+            <li><a href="login.php">PROFILO</a></li>
+            <li><a href="negozio.php"><span lang="en">SHOP</span></a></li>
+            <li><a href="carrello.php">CARRELLO </a></li>
+        </ul>
+    </nav>
+
+    <nav id="breadcrumb" aria-label="percorso">
+        <p>Ti trovi in: Pagina non trovata</p>
+    </nav>
+
+    <main>
+
+
+        <div id="primoContenuto" class="errore404 info">
+            <h2><span role="alert">Pagina non trovata, errore 404</span></h2>
+
+            <p>Oops...!</p>
+            <p>Non ci sono opere qui.</p>
+            <p>Usa il menù in alto per trovare quello che cerchi.</p>
+            <a href="home.html" class="infoButton">Torna alla home</a>
+        </div>
+
+            <a href="#" id="torna_su" class="infoButton" aria-label="Torna su">&#x21E7;</a>
+    </main>
+
+
+    <footer id="footer" class="flex_column no_gap">
+        <div class="flex_column no_gap">
+            <p>Contatti</p>
+            <dl>
+                <dt>Scrivi una <span lang="en">e-mail</span>:</dt>
+                <dd><a href="mailto:assistenza@jennysaville.com">assistenza@jennysaville.com</a></dd>
+                <dt>Chiama:</dt>
+                <dd><a href="tel:1234567890">1234567890</a></dd>
+            </dl>
+        </div>
+        <p>Alessia Domuta, Elena Pandolfo, Riccardo Rossi, Filippo Tonini - <span lang="en">All rights Reserved</span></p>
+    </footer>
+
+</body>
+
+</html>
+
